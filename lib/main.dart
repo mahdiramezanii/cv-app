@@ -17,5 +17,12 @@ class GetAplication extends StatelessWidget{
 Widget GetBody(){
 
 
-  return MaterialApp();
+  return MaterialApp(
+    debugShowCheckedModeBanner: false,
+    theme: ThemeData(fontFamily: "vazir"),
+    home: Scaffold(body: SafeArea(
+      child: Text("مهدی رمضانی")
+      ),
+      ),
+  );
 }
