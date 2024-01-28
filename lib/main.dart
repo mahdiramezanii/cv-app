@@ -78,7 +78,42 @@ class GetAplication extends StatelessWidget {
         ),
         SizedBox(height: 7),
         getRowIcon(),
+        SizedBox(height: 7),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            _getSkilCard(path_image: "assets/dart.png", text: "dart"),
+            _getSkilCard(path_image: "assets/flutter.png", text: "Flutter"),
+            _getSkilCard(path_image: "assets/python.png", text: "Python"),
+          ],
+        )
       ],
+    );
+  }
+
+  Widget _getSkilCard({required String path_image, required String text}) {
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            SizedBox(
+              width: 100,
+              height: 100,
+              child: Image(
+                image: AssetImage(path_image),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                text,
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 
@@ -89,7 +124,7 @@ class GetAplication extends StatelessWidget {
         IconButton(
           onPressed: () {},
           icon: FaIcon(
-            FontAwesomeIcons.instagram,
+            FontAwesomeIcons.squareInstagram,
             size: 40,
           ),
           color: Colors.red,
