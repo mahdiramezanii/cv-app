@@ -128,7 +128,7 @@ class GetAplication extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  for (String char in myText)
+                  for(String char in myText)
                     Text(
                       char,
                       style: TextStyle(fontSize: 16),
