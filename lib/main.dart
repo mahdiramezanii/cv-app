@@ -38,6 +38,9 @@ Widget getbody() {
   return SingleChildScrollView(
     child: Column(
       children: [
+        SizedBox(
+          height: 5,
+        ),
         Center(
           child: CircleAvatar(
             backgroundColor: Colors.black,
@@ -45,9 +48,12 @@ Widget getbody() {
             // backgroundImage: AssetImage("assetName"),
           ),
         ),
+        SizedBox(
+          height: 5,
+        ),
         Text(
           "من مهدی رمضانی هستم برنامه نویس فلاتر",
-          style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
+          style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
         ),
       ],
     ),
