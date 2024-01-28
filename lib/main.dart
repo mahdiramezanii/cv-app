@@ -92,8 +92,53 @@ class GetAplication extends StatelessWidget {
               ],
             ),
           ),
-        )
+        ),
+        SizedBox(height: 12),
+        _getResume(),
       ],
+    );
+  }
+
+  Widget _getResume() {
+    return DecoratedBox(
+      position: DecorationPosition.background,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(10)),
+          color: Colors.cyan[100]),
+      child: Container(
+        
+          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+          width: double.infinity,
+          child: Column(
+            children: [
+              Text(
+                "سابقه کاری من",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
+              ),
+              SizedBox(
+                height: 12,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Text(
+                    "برنامه نویس جنگو در تیپ هاب",
+                    style: TextStyle(fontSize: 16),
+                    textDirection: TextDirection.rtl,
+                  ),
+                  Text(
+                    "برنامه نویس و توسعه دهنده وبسایت انجمن کامپیوتر و سامانه فروش امور فرهنگی دانشگاه صنعتی سیرجان",
+                    textDirection: TextDirection.rtl,
+                    style: TextStyle(fontSize: 16),
+                  ),
+                  Text(
+                    "برنامه نویس فلاتر و دارت از سال 1401",
+                    style: TextStyle(fontSize: 16),
+                  ),
+                ],
+              )
+            ],
+          )),
     );
   }
 
