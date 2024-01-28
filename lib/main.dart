@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -100,13 +102,18 @@ class GetAplication extends StatelessWidget {
   }
 
   Widget _getResume() {
+    var myText = [
+      "برنامه نویس جنگو در تیپ هاب",
+      "برنامه نویس و توسعه دهنده وبسایت انجمن کامپیوتر و سامانه فروش امور فرهنگی دانشگاه صنعتی سیرجان",
+      "برنامه نویس فلاتر و دارت از سال 1401",
+    ];
+
     return DecoratedBox(
       position: DecorationPosition.background,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(10)),
-          color: Colors.cyan[100]),
+          borderRadius: BorderRadius.all(Radius.circular(30)),
+          color: Colors.cyan[50]),
       child: Container(
-        
           padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
           width: double.infinity,
           child: Column(
@@ -121,20 +128,12 @@ class GetAplication extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Text(
-                    "برنامه نویس جنگو در تیپ هاب",
-                    style: TextStyle(fontSize: 16),
-                    textDirection: TextDirection.rtl,
-                  ),
-                  Text(
-                    "برنامه نویس و توسعه دهنده وبسایت انجمن کامپیوتر و سامانه فروش امور فرهنگی دانشگاه صنعتی سیرجان",
-                    textDirection: TextDirection.rtl,
-                    style: TextStyle(fontSize: 16),
-                  ),
-                  Text(
-                    "برنامه نویس فلاتر و دارت از سال 1401",
-                    style: TextStyle(fontSize: 16),
-                  ),
+                  for (String char in myText)
+                    Text(
+                      char,
+                      style: TextStyle(fontSize: 16),
+                      textDirection: TextDirection.rtl,
+                    ),
                 ],
               )
             ],
