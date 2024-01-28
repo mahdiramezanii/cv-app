@@ -79,13 +79,19 @@ class GetAplication extends StatelessWidget {
         SizedBox(height: 7),
         getRowIcon(),
         SizedBox(height: 7),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            _getSkilCard(path_image: "assets/dart.png", text: "dart"),
-            _getSkilCard(path_image: "assets/flutter.png", text: "Flutter"),
-            _getSkilCard(path_image: "assets/python.png", text: "Python"),
-          ],
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                _getSkilCard(path_image: "assets/dart.png", text: "Dart"),
+                _getSkilCard(path_image: "assets/flutter.png", text: "Flutter"),
+                _getSkilCard(path_image: "assets/python.png", text: "Python"),
+              ],
+            ),
+          ),
         )
       ],
     );
@@ -93,6 +99,8 @@ class GetAplication extends StatelessWidget {
 
   Widget _getSkilCard({required String path_image, required String text}) {
     return Card(
+      elevation: 10,
+      shadowColor: Colors.cyan,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
